@@ -17,10 +17,10 @@
                     <!-- controllo per vedere se Vue funziona correttamente -->
                     <!-- <h1>{{message}}</h1> -->
                     <div class="single-img active">
-                        <img src="img/02.jpg" alt="">
+                        <img :src="slides[currentSlide].image" alt="slides[currentSlide].title">
                         <div class="single-title">
-                            <h2>Svezia</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.</p>
+                            <h2>{{ slides[currentSlide].title }}</h2>
+                        <p>{{ slides[currentSlide].text }}</p>
                         </div>
                     </div>
                   
@@ -29,20 +29,8 @@
                     <div class="side-arrow top">
                         <i class="fas fa-arrow-up"></i>
                     </div>
-                    <div class="single-side-img active">
-                        <img src="img/01.jpg" alt="">
-                    </div>
-                    <div class="single-side-img">
-                        <img src="img/02.jpg" alt="">
-                    </div>
-                    <div class="single-side-img">
-                        <img src="img/03.jpg" alt="">
-                    </div>
-                    <div class="single-side-img">
-                        <img src="img/04.jpg" alt="">
-                    </div>
-                    <div class="single-side-img">
-                        <img src="img/05.jpg" alt="">
+                    <div v-for="slide, index in slides" class="single-side-img" :class="{'active': index === currentSlide } ">
+                        <img :src="slide.image" alt="slide.title">
                     </div>
                     <div class="side-arrow down">
                         <i class="fas fa-arrow-down"></i>

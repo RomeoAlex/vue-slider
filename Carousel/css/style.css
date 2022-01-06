@@ -39,6 +39,7 @@
 }
 .active{
     display: block;
+    filter: grayscale(0);
 }
 .single-img img{
     height:100%;
@@ -83,6 +84,7 @@
 .single-side-img{
     width: 100%;
     height: 20%;
+    filter: grayscale(1);
 }
 .single-side-img img{
     height:100%;
