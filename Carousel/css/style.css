@@ -39,7 +39,7 @@
 }
 .active{
     display: block;
-    filter: grayscale(0);
+    /* filter: grayscale(0); */
 }
 .single-img img{
     height:100%;
@@ -67,9 +67,9 @@
     border-radius: 50%;
     height: 30px;
     width:30px;
-    background-color: rgba(0, 0,0, 0.5);
+    background-color: white;
     font-size: 20px;
-    color: black;
+    color: rgba(0,0,0,0.5);
     z-index: 1;
     text-align: center;
     line-height: 30px;

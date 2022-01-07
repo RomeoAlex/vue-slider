@@ -26,13 +26,13 @@
                   
                 </div>
                 <div class="side-img">
-                    <div class="side-arrow top">
+                    <div @click="backSlide" class="side-arrow top">
                         <i class="fas fa-arrow-up"></i>
                     </div>
-                    <div v-for="slide, index in slides" class="single-side-img" :class="{'active': index === currentSlide } ">
+                    <div v-for="slide, index in slides" class="single-side-img" :class="{'grey-no': index === currentSlide } ">
                         <img :src="slide.image" alt="slide.title">
                     </div>
-                    <div class="side-arrow down">
+                    <div @click="nextSlide" class="side-arrow down">
                         <i class="fas fa-arrow-down"></i>
                     </div>
                 </div>

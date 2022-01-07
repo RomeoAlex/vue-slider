@@ -33,7 +33,18 @@ const app = new Vue(
                 },
             ],
         },
-        methods:{},
+        methods:{
+            nextSlide: function() {
+                if( this.currentSlide < this.slides.length - 1 ){
+                    this.currentSlide++;
+                }
+            },
+            backSlide: function() {
+                if( this.currentSlide < this.slides.length  ){
+                    this.currentSlide--;
+                }
+            },
+        },
     }
 );
 
